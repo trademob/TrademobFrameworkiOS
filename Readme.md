@@ -16,13 +16,13 @@ After cloning the repository with all its dependencies a folder called "Trademob
 
 Add the following frameworks to your project. Note that if you are targeting iOS versions < 5.0 the AdSupport.framework needs to be optional.
 
-![ ](images/frameworks.png)
+![ ](Documentation/images/frameworks.png)
 
 ###### Trademob framework
 
 Open the TrademobFramework/Framework folder and drag the Tradmob.framework folder to an appropriate group in your project. In the example below it was just added on top of all other frameworks the project uses.
 
-![ ](images/trademobFramework.png)
+![ ](Documentation/images/trademobFramework.png)
 
 #### 3. Add tracking code
 
