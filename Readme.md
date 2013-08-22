@@ -2,11 +2,11 @@
 
 ---
 
-## Integrating the SDK
+## Integrating the framework
 
 #### 1. Clone the project:
 
-	$ git clone --recursive -b development https://github.com/trademob/TrademobFramework.git
+	$ git clone https://github.com/trademob/TrademobFramework.git
 
 After cloning the repository with all its dependencies a folder called "TrademobFramework" has been created.
 
