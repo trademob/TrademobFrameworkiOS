@@ -305,7 +305,7 @@
 				GCC_PREFIX_HEADER = "TrademobDemoApp/SupportingFiles/TrademobDemoApp-Prefix.pch";
 				INFOPLIST_FILE = "TrademobDemoApp/SupportingFiles/TrademobDemoApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -323,7 +323,7 @@
 				GCC_PREFIX_HEADER = "TrademobDemoApp/SupportingFiles/TrademobDemoApp-Prefix.pch";
 				INFOPLIST_FILE = "TrademobDemoApp/SupportingFiles/TrademobDemoApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
