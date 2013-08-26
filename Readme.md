@@ -8,7 +8,7 @@
 
 	$ git clone https://github.com/trademob/TrademobFramework.git
 
-After cloning the repository with all its dependencies a folder called "TrademobFramework" has been created.
+After cloning the repository a folder called "TrademobFramework" has been created.
 
 #### 2. Add the SDK to your project
 
@@ -40,7 +40,7 @@ Add the TMTracker header to your prefix file. For a freshly setup project you pr
 
 ###### File: AppDelegate
 
-* Add [TMTracker start] to the -(BOOL)application:didFinishLaunchingWithOptions method
+* Add <code>[TMTracker start]</code> to the <code>-(BOOL)application:didFinishLaunchingWithOptions</code> method
 * Configure tracking options if desired
 * You are ready to go
 

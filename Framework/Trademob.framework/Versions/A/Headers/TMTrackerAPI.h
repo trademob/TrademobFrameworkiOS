@@ -62,4 +62,22 @@ typedef NS_OPTIONS(NSUInteger,TMTrackingFeatureMask) {
 
 + (void)setTrackingFeatureMask:(TMTrackingFeatureMask)mask;
 
+/**
+ * Activates tracking. Tracking is activated by default.
+ * Only use this methid to reactivate tracking after it has been
+ * deactivated using -(void)deactivate.
+ */
+
++ (void)activate;
+
+/**
+ * Dectivates tracking. This is a persistent operation.
+ * If tracking has been daactivated using this method no tracking
+ * will be performed at all, even after app restarts.
+ * Tracking will only be performed again when the -(void)activate method
+ * has been called.
+ */
+
++ (void)deactivate;
+
 @end
