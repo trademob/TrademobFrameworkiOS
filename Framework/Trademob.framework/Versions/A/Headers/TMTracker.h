@@ -5,13 +5,8 @@
 #import "TMTrackerAPI.h"
 
 /**
- * TMTracker is the single entry point in order to invoke the tracking via TrademobSDK.
- * It exposes the absolute minumum of methods in order to do so.
- * Task performed by TMTracker are:
- *
- * * initializing the TMTracker singleton
- * * enabling/disabling tracking features
- * * tracking a custom event
+ * TMTracker is the single entry point in order to invoke tracking.
+ * The TMTrackerAPI protocol exposes all necessary methods.
  */
 
 @interface TMTracker : NSObject <TMTrackerAPI>

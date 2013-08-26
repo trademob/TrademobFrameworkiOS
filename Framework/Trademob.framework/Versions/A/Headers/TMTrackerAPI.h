@@ -1,6 +1,15 @@
 // Apple
 #import <Foundation/Foundation.h>
 
+/**
+ * Defines methods for:
+ *
+ * * invoking tracking
+ * * diable tracking
+ * * set tracking fatures
+ * * track custom events
+ */
+
 // Tracking feature flags
 typedef NS_OPTIONS(NSUInteger,TMTrackingFeatureMask) {
   TMTrackingFeatureMaskNone          = 0,
@@ -65,19 +74,19 @@ typedef NS_OPTIONS(NSUInteger,TMTrackingFeatureMask) {
 /**
  * Activates tracking. Tracking is activated by default.
  * Only use this methid to reactivate tracking after it has been
- * deactivated using -(void)deactivate.
+ * deactivated using disable
  */
 
-+ (void)activate;
++ (void)enable;
 
 /**
- * Dectivates tracking. This is a persistent operation.
- * If tracking has been daactivated using this method no tracking
+ * Deactivates tracking. This is a persistent operation.
+ * If tracking has been deactivated using this method no tracking
  * will be performed at all, even after app restarts.
- * Tracking will only be performed again when the -(void)activate method
- * has been called.
+ * Tracking will only be performed again when the enable method
+ * has been called before invoking start
  */
 
-+ (void)deactivate;
++ (void)disable;
 
 @end
