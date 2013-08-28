@@ -105,4 +105,4 @@ The demo app features a simple project readily setup for Trademob tracking.
 #### 7. Requirements
 
 * Minimum iOS version: 4.1.
-* Framework size: 517kb
+* Framework size: 231kb
