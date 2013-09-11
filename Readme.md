@@ -70,7 +70,6 @@ TMTrackingFeatureMaskIDFA          | disables IDFA tracking
 TMTrackingFeatureMaskMAC           | disables  MAC Adress tracking
 TMTrackingFeatureMaskWifiSSID      | disables WIFISSID tracking
 TMTrackingFeatureMaskCarrier       | disables phone carrier tracking
-TMTrackingFeatureMaskInstalledApps | disables tracking of installed apps
 
 Values can be combined using bitwise inclusive OR.
 Example: To disable all features mentioned above combine the values like so:
