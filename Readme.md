@@ -41,21 +41,43 @@ Add the TMTracker header to your prefix file. For a freshly setup project you pr
 ###### File: AppDelegate
 
 * Add <code>[TMTracker start]</code> to the <code>-(BOOL)application:didFinishLaunchingWithOptions</code> method
+* Add <code>[TMTracker setOpenURL:url]</code> to the <code>- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation</code> method
 * Configure tracking options if desired
 * You are ready to go
 
+If you add the Trademob.framework to a freshly setup project your AppDelegate should look like this:
+
+
 ```
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+// TrademobSDK
+#import "TMTracker.h"
+
+@implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application
+  didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{  
+  // Start Tracking
+  [TMTracker start];
+  
   // Display window
   [self.window makeKeyAndVisible];
   
-  // Invoke Trademob tracker
-  [TMTracker start];
-  
-  // Application start succeeded
+  // Application launch finished  
   return YES;
 }
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+  // Store open URL
+  [TMTracker setOpenURL:url];
+  return YES;
+}
+
+@end
 
 ```
 
@@ -75,16 +97,15 @@ Values can be combined using bitwise inclusive OR.
 Example: To disable all features mentioned above combine the values like so:
 
 ```
-  // Create tracking feature mask
-  TMTrackingFeatureMask mask;
-  mask = (TMTrackingFeatureMaskIDFA|
-          TMTrackingFeatureMaskMAC|
-          TMTrackingFeatureMaskWifiSSID|
-          TMTrackingFeatureMaskCarrier|
-          TMTrackingFeatureMaskInstalledApps);
-  
-  // Set mask
-  [TMTracker setTrackingFeatureMask:mask];
+// Create tracking feature mask
+TMTrackingFeatureMask mask;
+mask = (TMTrackingFeatureMaskIDFA|
+        TMTrackingFeatureMaskMAC|
+        TMTrackingFeatureMaskWifiSSID|
+        TMTrackingFeatureMaskCarrier);
+
+// Set mask
+[TMTracker setTrackingFeatureMask:mask];
 ```
 
 #### 5. Custom tracking
@@ -92,9 +113,16 @@ Example: To disable all features mentioned above combine the values like so:
 Tracking happens completely automatic but if desired special events can be tracked by the developer using custom tracking events. A custom tracking event is beeing composed of an event key and an optional info value.
 
 ```
-NSString *key = @"OldKingCole";
-NSDictionary *value = @{@"HeCalledForHis": @[@"PipeAndBowl"]};
-[TMTracker track:key info:value];
+// Generate an action info hash that contains any domain-specific key-value pairs
+// and an integer typed value
+NSDictionary *info = @{
+  @"user_id": @"anywho",
+  @"stuff_id": @"anywhat",
+  @"value": @1299
+};
+
+// Call the Trademob Tracker singleton to track the action and its info hash
+[TMTracker track:@"foobar_action" info:info];
 ```
 
 #### 6. Demo app

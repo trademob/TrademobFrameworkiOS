@@ -35,6 +35,31 @@ typedef NS_OPTIONS(NSUInteger,TMTrackingFeatureMask) {
 + (BOOL)start;
 
 /**
+ * This method call must be placed in the class that implements the UIApplicationDelegate
+ * method -application:openURL:sourceApplication:annotation:
+ * It forwards the URL the app was opened with to the tracker for usage
+ * in tracking events. While no tracking is beeing triggered directly
+ * by using this method, the provided URL will be used by the next appropriate
+ * tracking event. The sample code shows the proper integration of this method.
+ *
+ *
+ *	- (BOOL)application:(UIApplication *)application
+ *	            openURL:(NSURL *)url
+ *	  sourceApplication:(NSString *)sourceApplication
+ *	         annotation:(id)annotation
+ *	{
+ *	  [TMTracker trackOpenURL:url];
+ *	  return YES;
+ *	}
+ *
+ * @param url The NSURL supplied via method argument
+ * @warning Calling of this method is required! 
+ * If it is missing tracking of app open URLs does not work properly!
+ */
+
++ (void)setOpenURL:(NSURL *)url;
+
+/**
  * Sends a custom tracking event to the server.
  * A custom event is composed of a event key and an optional info value.
  * @param event A NSString used as key for the event. This value may not be nil.

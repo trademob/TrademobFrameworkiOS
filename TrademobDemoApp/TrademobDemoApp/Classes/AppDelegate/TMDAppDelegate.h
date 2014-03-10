@@ -1,11 +1,4 @@
-//
-//  TMDAppDelegate.h
-//  TrademobDemoApp
-//
-//  Created by Roberto Seidenberg on 22.08.13.
-//  Copyright (c) 2013 Trademob. All rights reserved.
-//
-
+// Apple
 #import <UIKit/UIKit.h>
 
 @class TMDViewController;
