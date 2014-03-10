@@ -13,11 +13,10 @@
 // Tracking feature flags
 typedef NS_OPTIONS(NSUInteger,TMTrackingFeatureMask) {
   TMTrackingFeatureMaskNone          = 0,
-	TMTrackingFeatureMaskIDFA          = 1 << 0,
-	TMTrackingFeatureMaskMAC           = 1 << 1,
-	TMTrackingFeatureMaskWifiSSID      = 1 << 2,
-	TMTrackingFeatureMaskCarrier       = 1 << 3,
-	TMTrackingFeatureMaskInstalledApps = 1 << 4
+	TMTrackingFeatureMaskMAC           = 1 << 0,
+	TMTrackingFeatureMaskWifiSSID      = 1 << 1,
+	TMTrackingFeatureMaskCarrier       = 1 << 2,
+	TMTrackingFeatureMaskInstalledApps = 1 << 3
 };
 
 @protocol TMTrackerAPI
@@ -79,7 +78,6 @@ typedef NS_OPTIONS(NSUInteger,TMTrackingFeatureMask) {
  * Flag                               | Description
  * -----------------------------------|--------------------------------------------------
  * TMTrackingFeatureMaskNone          | enables all features (this is the default value)
- * TMTrackingFeatureMaskIDFA          | disables IDFA tracking
  * TMTrackingFeatureMaskMAC           | disables  MAC Adress tracking
  * TMTrackingFeatureMaskWifiSSID      | disables WIFISSID tracking
  * TMTrackingFeatureMaskCarrier       | disables phone carrier tracking
@@ -89,7 +87,7 @@ typedef NS_OPTIONS(NSUInteger,TMTrackingFeatureMask) {
  *
  * Example: To disbale all features mentioned above combine the values like so:
  *
- * (TMTrackingFeatureMaskIDFA|TMTrackingFeatureMaskMAC|TMTrackingFeatureMaskWifiSSID|
+ * (TMTrackingFeatureMaskMAC|TMTrackingFeatureMaskWifiSSID|
  * TMTrackingFeatureMaskCarrier|TMTrackingFeatureMaskInstalledApps)
  * @param mask TMTrackingFeatureMask
  */

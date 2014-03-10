@@ -16,8 +16,7 @@
   
   // Create tracking feature mask
   TMTrackingFeatureMask mask;
-  mask = (TMTrackingFeatureMaskIDFA|
-          TMTrackingFeatureMaskMAC|
+  mask = (TMTrackingFeatureMaskMAC|
           TMTrackingFeatureMaskWifiSSID|
           TMTrackingFeatureMaskCarrier);
   

@@ -88,7 +88,6 @@ Certain tracking features can be disabled via feature mask. See the list below f
 Flag                               | Description
 -----------------------------------|--------------------------------------------------
 TMTrackingFeatureMaskNone          | enables all features (this is the default value)
-TMTrackingFeatureMaskIDFA          | disables IDFA tracking
 TMTrackingFeatureMaskMAC           | disables  MAC Adress tracking
 TMTrackingFeatureMaskWifiSSID      | disables WIFISSID tracking
 TMTrackingFeatureMaskCarrier       | disables phone carrier tracking
@@ -99,8 +98,7 @@ Example: To disable all features mentioned above combine the values like so:
 ```
 // Create tracking feature mask
 TMTrackingFeatureMask mask;
-mask = (TMTrackingFeatureMaskIDFA|
-        TMTrackingFeatureMaskMAC|
+mask = (TMTrackingFeatureMaskMAC|
         TMTrackingFeatureMaskWifiSSID|
         TMTrackingFeatureMaskCarrier);
 
