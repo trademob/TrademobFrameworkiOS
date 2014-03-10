@@ -11,7 +11,6 @@
 		A4C3E96B17C64B2800188BEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C3E96A17C64B2800188BEC /* UIKit.framework */; };
 		A4C3E96D17C64B2800188BEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C3E96C17C64B2800188BEC /* Foundation.framework */; };
 		A4C3E96F17C64B2800188BEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C3E96E17C64B2800188BEC /* CoreGraphics.framework */; };
-		A4C3E99117C64BD400188BEC /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C3E99017C64BD400188BEC /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A4C3E99317C64BE100188BEC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C3E99217C64BE100188BEC /* SystemConfiguration.framework */; };
 		A4C3E99517C64BE800188BEC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C3E99417C64BE800188BEC /* CoreTelephony.framework */; };
 		A4C3E99717C64BEF00188BEC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C3E99617C64BEF00188BEC /* CFNetwork.framework */; };
@@ -23,6 +22,7 @@
 		A4C3E9B017C65A2C00188BEC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A4C3E9AD17C65A2C00188BEC /* Default.png */; };
 		A4C3E9B117C65A2C00188BEC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4C3E9AE17C65A2C00188BEC /* Default@2x.png */; };
 		A4C3E9B617C65A8A00188BEC /* TMDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C3E9B517C65A8A00188BEC /* TMDAppDelegate.m */; };
+		A4D0561118CE2EA100AEB548 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C3E99017C64BD400188BEC /* AdSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,11 +53,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4D0561118CE2EA100AEB548 /* AdSupport.framework in Frameworks */,
 				A4C3E99917C64BF500188BEC /* MobileCoreServices.framework in Frameworks */,
 				A4C3E99717C64BEF00188BEC /* CFNetwork.framework in Frameworks */,
 				A4C3E99517C64BE800188BEC /* CoreTelephony.framework in Frameworks */,
 				A4C3E99317C64BE100188BEC /* SystemConfiguration.framework in Frameworks */,
-				A4C3E99117C64BD400188BEC /* AdSupport.framework in Frameworks */,
 				A4C3E96B17C64B2800188BEC /* UIKit.framework in Frameworks */,
 				A469417D18C0F4F300C7F755 /* Trademob.framework in Frameworks */,
 				A4C3E96D17C64B2800188BEC /* Foundation.framework in Frameworks */,
@@ -298,9 +298,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\\\\\"$(SRCROOT)/../Framework\\\\\\\"",
-					/Users/robertoseidenberg/Basis/TRADEMOB/DEV/SDKS/TrademobFrameworkiOS/Framework,
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/TrademobSDK-durybpmtcqhfoqbfeaqqxotqdpzw/Build/Products/Release-iphoneuniversal",
+					"\"$(SRCROOT)/../Framework/\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrademobDemoApp/SupportingFiles/TrademobDemoApp-Prefix.pch";
@@ -317,9 +315,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\\\\\"$(SRCROOT)/../Framework\\\\\\\"",
-					/Users/robertoseidenberg/Basis/TRADEMOB/DEV/SDKS/TrademobFrameworkiOS/Framework,
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/TrademobSDK-durybpmtcqhfoqbfeaqqxotqdpzw/Build/Products/Release-iphoneuniversal",
+					"\"$(SRCROOT)/../Framework/\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrademobDemoApp/SupportingFiles/TrademobDemoApp-Prefix.pch";
