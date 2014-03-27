@@ -14,7 +14,7 @@ After cloning the repository a folder called "TrademobFramework" has been create
 
 ###### Framework depenencies
 
-Add the following frameworks to your project. Note that if you are targeting iOS versions < 5.0 the AdSupport.framework needs to be optional.
+Add the following frameworks to your project.
 
 ![ ](Documentation/images/frameworks.png)
 
