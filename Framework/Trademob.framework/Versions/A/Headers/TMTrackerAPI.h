@@ -67,6 +67,15 @@ typedef NS_OPTIONS(NSUInteger,TMTrackingFeatureMask) {
 
 + (void)track:(NSString *)event info:(NSDictionary *)info;
 
+/**
+ * Fetches payload data containing campaign information
+ * tailored to the app context that the app was installed from.
+ * @return Returns NSDictionary if a payload is available for the installation.
+ * Returns nil if no context is available or the request failed.
+ */
+
++ (NSDictionary *)clickContext;
+
 # pragma mark - Features
 
 /**
