@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A469417D18C0F4F300C7F755 /* Trademob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A469417C18C0F4F300C7F755 /* Trademob.framework */; };
+		A47F827F18E473FF0032E6F2 /* TMRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F827D18E473FF0032E6F2 /* TMRootViewController.m */; };
+		A47F828018E473FF0032E6F2 /* TMRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A47F827E18E473FF0032E6F2 /* TMRootViewController.xib */; };
 		A4C3E96B17C64B2800188BEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C3E96A17C64B2800188BEC /* UIKit.framework */; };
 		A4C3E96D17C64B2800188BEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C3E96C17C64B2800188BEC /* Foundation.framework */; };
 		A4C3E96F17C64B2800188BEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C3E96E17C64B2800188BEC /* CoreGraphics.framework */; };
@@ -27,6 +29,9 @@
 
 /* Begin PBXFileReference section */
 		A469417C18C0F4F300C7F755 /* Trademob.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Trademob.framework; path = ../Framework/Trademob.framework; sourceTree = "<group>"; };
+		A47F827C18E473FF0032E6F2 /* TMRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMRootViewController.h; path = ViewControllers/TMRootViewController/TMRootViewController.h; sourceTree = "<group>"; };
+		A47F827D18E473FF0032E6F2 /* TMRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMRootViewController.m; path = ViewControllers/TMRootViewController/TMRootViewController.m; sourceTree = "<group>"; };
+		A47F827E18E473FF0032E6F2 /* TMRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TMRootViewController.xib; path = ViewControllers/TMRootViewController/TMRootViewController.xib; sourceTree = "<group>"; };
 		A4C3E96717C64B2800188BEC /* TrademobDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrademobDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C3E96A17C64B2800188BEC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A4C3E96C17C64B2800188BEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,6 +73,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A47F827A18E473D80032E6F2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A47F827B18E473E10032E6F2 /* TMRootViewController */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A47F827B18E473E10032E6F2 /* TMRootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A47F827C18E473FF0032E6F2 /* TMRootViewController.h */,
+				A47F827D18E473FF0032E6F2 /* TMRootViewController.m */,
+				A47F827E18E473FF0032E6F2 /* TMRootViewController.xib */,
+			);
+			name = TMRootViewController;
+			sourceTree = "<group>";
+		};
 		A4C3E95E17C64B2700188BEC = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				A4C3E9B317C65A8A00188BEC /* AppDelegate */,
+				A47F827A18E473D80032E6F2 /* ViewControllers */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -215,6 +239,7 @@
 				A4C3E9A417C656BB00188BEC /* logo.png in Resources */,
 				A4C3E9AA17C65A0700188BEC /* MainWindow.xib in Resources */,
 				A4C3E9AF17C65A2C00188BEC /* Default-568h@2x.png in Resources */,
+				A47F828018E473FF0032E6F2 /* TMRootViewController.xib in Resources */,
 				A4C3E9B017C65A2C00188BEC /* Default.png in Resources */,
 				A4C3E9B117C65A2C00188BEC /* Default@2x.png in Resources */,
 			);
@@ -229,6 +254,7 @@
 			files = (
 				A4C3E9A717C659B900188BEC /* main.m in Sources */,
 				A4C3E9B617C65A8A00188BEC /* TMDAppDelegate.m in Sources */,
+				A47F827F18E473FF0032E6F2 /* TMRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +329,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrademobDemoApp/SupportingFiles/TrademobDemoApp-Prefix.pch";
 				INFOPLIST_FILE = "TrademobDemoApp/SupportingFiles/TrademobDemoApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -320,7 +346,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrademobDemoApp/SupportingFiles/TrademobDemoApp-Prefix.pch";
 				INFOPLIST_FILE = "TrademobDemoApp/SupportingFiles/TrademobDemoApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
