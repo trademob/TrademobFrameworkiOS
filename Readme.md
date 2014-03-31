@@ -123,11 +123,19 @@ NSDictionary *info = @{
 [TMTracker track:@"foobar_action" info:info];
 ```
 
-#### 6. Demo app
+#### 6. Click context
+
+ See below for a sample of how to fetch data containing campaign information tailored to the app context that the app was installed from. The method returns a dictionary if data was available. If no data was found or the fetch failed it returns nil.
+ 
+ ```
+NSDictionary *context = [TMTracker clickContext];
+ ```
+
+#### 7. Demo app
 
 The demo app features a simple project readily setup for Trademob tracking.
 
-#### 7. Requirements
+#### 8. Requirements
 
 * Minimum iOS version: 5.1.1
 * Framework size: 231kb
