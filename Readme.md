@@ -125,10 +125,32 @@ NSDictionary *info = @{
 
 #### 6. Click context
 
- See below for a sample of how to fetch data containing campaign information tailored to the app context that the app was installed from. The method returns a dictionary if data was available. If no data was found or the fetch failed it returns nil.
+ See below for a sample of how to fetch data containing campaign information tailored to the app context that the app was installed from.
  
  ```
-NSDictionary *context = [TMTracker clickContext];
+  [TMTracker clickContextCompletionHandler: ^(NSDictionary *context, NSError *error){
+
+	// Fetch failed
+    if (error) {
+    
+      // Cancel
+      NSLog(@"An error occured!");
+      return;
+    }
+    
+    // Fetch succeeded
+    if (context) {
+    
+      // Do something with the data ...
+      NSLog(@"Payload found!");
+
+    } else {
+    
+     // No data, nothing to work on ...
+     NSLog(@"Sorry, no data available.");
+    }
+  }];
+
  ```
 
 #### 7. Demo app
