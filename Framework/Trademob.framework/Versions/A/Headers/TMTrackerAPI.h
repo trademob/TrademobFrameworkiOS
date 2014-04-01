@@ -70,11 +70,17 @@ typedef NS_OPTIONS(NSUInteger,TMTrackingFeatureMask) {
 /**
  * Fetches payload data containing campaign information
  * tailored to the app context that the app was installed from.
- * @return Returns NSDictionary if a payload is available for the installation.
- * Returns nil if no context is available or the request failed.
+ * If the request completes successfully and context data is available, 
+ * the context parameter of the handler block contains the appropriate data, 
+ * and the error parameter is nil. 
+ * If no context data is available the context parameter of the handler block is nil
+ * and the error parameter is nil. 
+ * If the request fails, the data parameter is nil 
+ * and the error parameter contain information about the failure.
  */
 
-+ (NSDictionary *)clickContext;
++ (void)clickContextCompletionHandler:
+  (void (^)(NSDictionary *context, NSError *error))block;
 
 # pragma mark - Features
 
