@@ -125,30 +125,16 @@ NSDictionary *info = @{
 
 #### 6. Click context
 
- See below for a sample of how to fetch data containing campaign information tailored to the app context that the app was installed from.
+See below for a sample of how to fetch campaign information belonging to the banner the app was installed from. When starting the app for the first time campaign information is only available after a short delay. This methods initiates several successive remote querys in order to get the data as fast as possible. Nevertheless please note that it can take up to 250 seconds before the callback block will be invoked with the fetch result.
  
  ```
   [TMTracker clickContextCompletionHandler: ^(NSDictionary *context, NSError *error){
 
-	// Fetch failed
-    if (error) {
+	// Fetch failed: Cancel
+    if (error) return;
     
-      // Cancel
-      NSLog(@"An error occured!");
-      return;
-    }
-    
-    // Fetch succeeded
-    if (context) {
-    
-      // Do something with the data ...
-      NSLog(@"Payload found!");
-
-    } else {
-    
-     // No data, nothing to work on ...
-     NSLog(@"Sorry, no data available.");
-    }
+    // Fetch succeeded: Do something with the data ...
+    if (context) NSLog(@"Payload found!");
   }];
 
  ```
