@@ -6,7 +6,7 @@
 
 #### 1. Clone the project:
 
-	$ git clone https://github.com/trademob/TrademobFramework.git
+	$ git clone https://github.com/trademob/TrademobFrameworkiOS.git
 
 After cloning the repository a folder called "TrademobFramework" has been created.
 
