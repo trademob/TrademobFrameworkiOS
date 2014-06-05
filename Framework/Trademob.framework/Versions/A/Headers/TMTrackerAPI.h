@@ -1,3 +1,5 @@
+//  Copyright 2014 Trademob. All rights reserved.
+
 // Apple
 #import <Foundation/Foundation.h>
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37AF007E1913F54800DDF30E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37AF007D1913F54800DDF30E /* Images.xcassets */; };
 		A469417D18C0F4F300C7F755 /* Trademob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A469417C18C0F4F300C7F755 /* Trademob.framework */; };
 		A47F827F18E473FF0032E6F2 /* TMRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F827D18E473FF0032E6F2 /* TMRootViewController.m */; };
 		A47F828018E473FF0032E6F2 /* TMRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A47F827E18E473FF0032E6F2 /* TMRootViewController.xib */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37AF007D1913F54800DDF30E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A469417C18C0F4F300C7F755 /* Trademob.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Trademob.framework; path = ../Framework/Trademob.framework; sourceTree = "<group>"; };
 		A47F827C18E473FF0032E6F2 /* TMRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMRootViewController.h; path = ViewControllers/TMRootViewController/TMRootViewController.h; sourceTree = "<group>"; };
 		A47F827D18E473FF0032E6F2 /* TMRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMRootViewController.m; path = ViewControllers/TMRootViewController/TMRootViewController.m; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		A4C3E97117C64B2800188BEC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				37AF007D1913F54800DDF30E /* Images.xcassets */,
 				A4C3E9A517C6597100188BEC /* TrademobDemoApp-Info.plist */,
 				A4C3E9A617C659B900188BEC /* main.m */,
 				A4C3E9A817C659E000188BEC /* TrademobDemoApp-Prefix.pch */,
@@ -213,6 +216,11 @@
 				CLASSPREFIX = TMD;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = Trademob;
+				TargetAttributes = {
+					A4C3E96617C64B2800188BEC = {
+						DevelopmentTeam = 5GE9R62638;
+					};
+				};
 			};
 			buildConfigurationList = A4C3E96217C64B2700188BEC /* Build configuration list for PBXProject "TrademobDemoApp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -238,6 +246,7 @@
 			files = (
 				A4C3E9A417C656BB00188BEC /* logo.png in Resources */,
 				A4C3E9AA17C65A0700188BEC /* MainWindow.xib in Resources */,
+				37AF007E1913F54800DDF30E /* Images.xcassets in Resources */,
 				A4C3E9AF17C65A2C00188BEC /* Default-568h@2x.png in Resources */,
 				A47F828018E473FF0032E6F2 /* TMRootViewController.xib in Resources */,
 				A4C3E9B017C65A2C00188BEC /* Default.png in Resources */,
@@ -273,7 +282,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Trademob GmbH (5GE9R62638)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Trademob GmbH (5GE9R62638)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -305,7 +315,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Trademob GmbH (5GE9R62638)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Trademob GmbH (5GE9R62638)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -322,6 +333,10 @@
 		A4C3E98E17C64B2800188BEC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../Framework/\"",
@@ -332,6 +347,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -339,6 +356,10 @@
 		A4C3E98F17C64B2800188BEC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../Framework/\"",
@@ -349,6 +370,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
